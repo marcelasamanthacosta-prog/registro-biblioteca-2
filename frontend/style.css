@@ -1,0 +1,171 @@
+/* ── Reset básico ── */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f2f5;
+  color: #333;
+}
+
+/* ════════════════════════════════
+       CABEÇALHO
+    ════════════════════════════════ */
+header {
+  background: #1a73e8;
+  color: white;
+  text-align: center;
+  padding: 16px;
+}
+
+header h1 {
+  font-size: 1.4rem;
+}
+
+/* ════════════════════════════════
+       MENU DE NAVEGAÇÃO
+    ════════════════════════════════ */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  background: #fff;
+  border-bottom: 2px solid #1a73e8;
+  padding: 10px;
+}
+
+nav button {
+  padding: 8px 20px;
+  border: 1px solid #1a73e8;
+  border-radius: 4px;
+  background: white;
+  color: #1a73e8;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+/* Estilo do botão ativo (página aberta) */
+nav button.ativo {
+  background: #1a73e8;
+  color: white;
+}
+
+/* ════════════════════════════════
+       ÁREA DE CONTEÚDO (páginas)
+    ════════════════════════════════ */
+
+/* Todas as páginas ficam ocultas por padrão */
+.pagina {
+  display: none;
+}
+
+/* Apenas a página com a classe "ativa" aparece */
+.pagina.ativa {
+  display: block;
+}
+
+/* ════════════════════════════════
+       FORMULÁRIO
+    ════════════════════════════════ */
+.container {
+  max-width: 700px;
+  margin: 30px auto;
+  background: white;
+  border-radius: 6px;
+  padding: 24px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+
+.container h2 {
+  font-size: 1.1rem;
+  color: #1a73e8;
+  margin-bottom: 20px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* Grupo de campo: label + input */
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 16px;
+}
+
+.campo label {
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #555;
+}
+
+.campo input,
+.campo select {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+.campo input:focus,
+.campo select:focus {
+  outline: none;
+  border-color: #1a73e8;
+}
+
+/* Dois campos lado a lado */
+.linha-dupla {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* Botões de ação */
+.acoes {
+  display: flex;
+  gap: 10px;
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.btn-salvar {
+  padding: 10px 24px;
+  background: #1a73e8;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.btn-salvar:hover {
+  background: #1558b0;
+}
+
+.btn-limpar {
+  padding: 10px 24px;
+  background: white;
+  color: #555;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.btn-limpar:hover {
+  background: #f5f5f5;
+}
+
+/* Mensagem de sucesso */
+.mensagem {
+  display: none;
+  margin-top: 16px;
+  padding: 10px 14px;
+  background: #e6f4ea;
+  color: #2e7d32;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
